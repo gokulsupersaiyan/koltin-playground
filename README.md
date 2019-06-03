@@ -9,4 +9,9 @@ ultimately eliminating the performance overhead caused by functional programming
 
 Even JVM uses these kind of techniques to optimize bytecode while running program on its own without doing anything on our side (https://aboullaite.me/understanding-jit-compiler-just-in-time-compiler/). When the system has more knowledge of the type system, the more tricks it can do for performance. That's why in recent times, JVM got a lot better and the performance is comparable to C++.
 
-We can use this kind of techniques when we are more worried about performance than the size of the JS file.
+We can use this kind of techniques when we are more worried about performance than the size of the JS file. 
+The above trick only solves the performance overhead of lambda function.we will still have intermediate results caused by functional programing. That's also a major overhead.
+
+Ex,
+_.([1,2,3,4]).filter(even).map(square);
+Filtering even numbers creates an array.That is not at needed after computing the square.
