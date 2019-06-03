@@ -1,0 +1,15 @@
+{
+  "name": "temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "kotlinc-js -output index.js -meta-info index.kt"
+  },
+  "author": "Gokul prabhu",
+  "license": "ISC",
+  "dependencies": {
+    "kotlinc-js": "^1.1.1"
+  }
+}
